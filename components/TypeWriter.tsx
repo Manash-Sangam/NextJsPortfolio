@@ -97,6 +97,7 @@ class TypeWriter extends Component<TypeWriterProps, TypeWriterState> {
               {index < splitText.length - 1 && <br />}
             </span>
           ))}
+          <span className={`cursor ${splitText.length > 1 ? 'large-cursor' : ''}`}>|</span>
         </span>
       </div>
     );
