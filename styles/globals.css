@@ -71,7 +71,7 @@ body {
 header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: var(--foreground);
-  height: 10vh; /* Set header height to 10% of the viewport height */
+  height: 8vh; /* Set header height to 10% of the viewport height */
   margin-left: -1rem; /* Remove left margin */
   margin-right: -1rem; /* Remove right margin */
 }
