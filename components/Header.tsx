@@ -18,15 +18,15 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-foreground p-4 shadow-md opacity-90">
-      <div className="mx-auto flex justify-end items-center">
+    <header className="bg-foreground p-4 shadow-md opacity-90 h-10vh ">
+      <div className="mx-auto flex h-full justify-end items-center">
         <div className="md:hidden">
-          <button onClick={toggleMenu} className="text-background">
+          <button onClick={toggleMenu} className="text-background text-lg">
             ☰
           </button>
         </div>
         <nav className={`flex-col md:flex-row md:flex ${isOpen ? 'flex opacity-100 ' : 'hidden'} md:flex`}>
-          <ul className="flex flex-col md:flex-row md:gap-20 items-center ">
+          <ul className="flex flex-col md:flex-row md:gap-20 items-center text-lg">
             <li>
               <Link href="/" legacyBehavior>
                 <a onClick={closeMenu} className={`text-background hover:text-gray-600 font-lato ${router.pathname === '/' ? 'border-b-2 border-light-text' : ''}`}>
@@ -56,7 +56,7 @@ export default function Header() {
               </Link>
             </li>
             <li className="flex items-center">
-              <FaDownload className="mr-2 text-background" />
+              <FaDownload className="mr-2 text-background text-lg" />
               <Link href="#" legacyBehavior>
                 <a onClick={closeMenu} className="text-background hover:text-gray-600 font-lato">
                   Resume

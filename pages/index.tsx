@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import Header from '../components/Header';
 import TypeWriter from '../components/TypeWriter';
+import ProfileImage from '../components/ProfileImage';
 
 export default function Home() {
   const staticText = ["Hello, I'm Manash.", 'A'];
@@ -8,8 +8,11 @@ export default function Home() {
 
   return (
     <div>
-      <main className="typerwriter-container mx-auto flex flex-col items-start">
-        <TypeWriter staticText={staticText} words={words} />
+      <main className="home-container">
+        <div className="typerwriter-container mx-auto flex flex-col md:flex-row">
+          <TypeWriter staticText={staticText} words={words} />
+          <ProfileImage />
+        </div>
       </main>
     </div>
   );

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,20 +9,20 @@
   --foreground: #000000;
   --body-color: #B2D8D8;
   --light-text: #0295d4;
-  --bold-text: #65000b;
+  --bold-text: #a92033;
 }
 
 body {
   color: var(--foreground);
   background: var(--body-color);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Space Mono', monospace;
   padding: 0; /* Remove padding from body */
   margin-left: 1rem; /* Add margin to the left */
   margin-right: 1rem; /* Add margin to the right */
 }
 
 .font-lato {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Space Mono', monospace;
 }
 
 .bg-bold-text {
@@ -33,17 +33,45 @@ body {
   border-color: var(--bold-text); /* Add this class */
 }
 
+.home-container {
+  background-color: var(--background);
+  min-height: calc(100vh - 10vh);
+  padding: 2rem 5rem 0 5rem; /* Add padding to the sides and top */
+}
+
+.project-container {
+  background-color: var(--background);
+  min-height: calc(100vh - 10vh);
+}
+
 .typerwriter-container {
   background-color: var(--background);
+  padding: 2rem 5rem 0 5rem; /* Add padding to the sides and top */
 }
 
 .about-container {
   background-color: var(--background);
 }
 
+.contact-container {
+  background-color: var(--background);
+  min-height: calc(100vh - 10vh); /* Adjust for header height */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  gap: 2rem; /* Add space between email-container and FloatingDock */
+}
+
+.email-container {
+  width: 50%;
+  margin: 0 auto; /* Center the container */
+}
+
 header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: var(--foreground);
+  height: 10vh; /* Set header height to 10% of the viewport height */
   margin-left: -1rem; /* Remove left margin */
   margin-right: -1rem; /* Remove right margin */
 }
@@ -75,13 +103,21 @@ nav a {
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
+
+  .email-container {
+    width: 80%; /* Set width to 80% in responsive view */
+  }
+
+  .typerwriter-container {
+    padding: 0; /* Remove padding in responsive view */
+  }
 }
 
 .typewriter {
-  max-width: 100%;
-  height: 50vh; /* Half of the view screen height */
+  max-width: 95%;
+  height: max-content; /* Half of the view screen height */
   line-height: 1.4;
-  font-family: 'Lekton', monospace;
+  font-family: 'Space Mono', monospace; /* Use Space Mono font */
   font-size: calc(2rem + 2vw); /* Relative font size */
   color: var(--foreground); /* Normal font color for static text */
   white-space: pre-wrap; /* Handle multi-line text */
@@ -90,14 +126,19 @@ nav a {
   width: 100%;
   text-align: left; /* Left-aligned text */
   margin-left: 2rem; /* Generous space on the left */
+  align-self: start;
 }
 
 @media (max-width: 768px) {
   .typewriter {
-    height: 40vh; /* 2/5th of the view screen height */
-    font-size: calc(1.5rem + 2vw); /* Adjusted for smaller screens */
+    height: 15vh; /* 2/5th of the view screen height */
+    font-size: calc(1rem + 2vw); /* Adjusted for smaller screens */
     white-space: normal;
     line-height: 1.5;
+    text-align: center; /* Center text horizontally in responsive view */
+  }
+  .typerwriter-container {
+    padding: 0; /* Remove padding in responsive view */
   }
 }
 
@@ -125,8 +166,6 @@ nav a {
 .dynamic-text {
   position: relative;
 }
-
-
 
 .cursor {
   display: inline-block;
