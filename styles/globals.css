@@ -46,7 +46,7 @@ body {
 
 .typerwriter-container {
   background-color: var(--background);
-  padding: 2rem 5rem 0 5rem; /* Add padding to the sides and top */
+  padding: 2rem 20rem 2rem 20rem; /* Add padding to the sides and top */
 }
 
 .about-container {
@@ -111,14 +111,19 @@ nav a {
   .typerwriter-container {
     padding: 0; /* Remove padding in responsive view */
   }
+
+  .profile-image {
+    width: 12vh; /* Reduced width */
+    height: 12vh; /* Reduced height */
+  }
 }
 
 .typewriter {
   max-width: 95%;
-  height: max-content; /* Half of the view screen height */
+  height: 30vh; /* Reduced height */
   line-height: 1.4;
   font-family: 'Space Mono', monospace; /* Use Space Mono font */
-  font-size: calc(2rem + 2vw); /* Relative font size */
+  font-size: calc(1.5rem + 1.5vw); /* Reduced font size */
   color: var(--foreground); /* Normal font color for static text */
   white-space: pre-wrap; /* Handle multi-line text */
   overflow: hidden;
@@ -131,8 +136,8 @@ nav a {
 
 @media (max-width: 768px) {
   .typewriter {
-    height: 15vh; /* 2/5th of the view screen height */
-    font-size: calc(1rem + 2vw); /* Adjusted for smaller screens */
+    height: 10vh; /* Reduced height */
+    font-size: calc(0.75rem + 1.5vw); /* Reduced font size */
     white-space: normal;
     line-height: 1.5;
     text-align: center; /* Center text horizontally in responsive view */

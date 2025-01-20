@@ -34,19 +34,9 @@ const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div
-      className="w-full bg-body-color font-sans md:px-10"
+      className="w-full bg-body-color font-lato md:px-10"
       ref={containerRef}
     >
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-4xl mb-4 text-foreground max-w-4xl">
-          Changelog from my journey
-        </h2>
-        <p className="text-neutral-700 text-sm md:text-base max-w-sm">
-          I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s
-          a timeline of my journey.
-        </p>
-      </div>
-
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => (
           <div
@@ -57,16 +47,16 @@ const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-bold-text flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-background border border-bold-text p-2" />
               </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-foreground">
+              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-foreground font-lato">
                 {item.title}
               </h3>
             </div>
 
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-foreground">
+              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-foreground font-lato">
                 {item.title}
               </h3>
-              {item.content}
+              <div className="font-lato">{item.content}</div>
             </div>
           </div>
         ))}
