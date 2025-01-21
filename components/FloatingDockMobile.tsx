@@ -38,6 +38,7 @@ const FloatingDockMobile = ({
                 className="relative group"
               >
                 <Link
+                  target="_blank"
                   href={item.href}
                   key={item.title}
                   className="h-12 w-12 rounded-full bg-background border-foreground border flex items-center justify-center"

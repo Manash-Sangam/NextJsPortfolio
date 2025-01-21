@@ -1,3 +1,5 @@
+import ImageGrid from '../components/ImageGrid';
+
 const timelineData = [
   {
     title: 'Started Learning Programming',
@@ -24,6 +26,14 @@ const timelineData = [
         <p>
           Additionally, I started contributing to open-source projects, which allowed me to collaborate with developers from around the world and gain valuable experience in working on large codebases. This was a significant milestone in my journey, as it taught me the importance of community and giving back.
         </p>
+        <ImageGrid
+          images={[
+            { src: '/assets/pp.jpeg', alt: 'Description of image 1', rowStart: 1, rowEnd: 2, colStart: 1, colEnd: 3 },
+            { src: '/assets/boat.jpg', alt: 'Description of image 2', rowStart: 2 , rowEnd: 3, colStart: 1, colEnd: 2 },
+            { src: '/path/to/image3.jpg', alt: 'Description of image 3', rowStart: 1, rowEnd: 4, colStart: 2, colEnd: 3 },
+            { src: '/path/to/image4.jpg', alt: 'Description of image 4', rowStart: 1, rowEnd: 4, colStart: 3, colEnd: 4 },
+          ]}
+        />
       </div>
     ),
   },
@@ -52,6 +62,14 @@ const timelineData = [
         <p>
           Furthermore, I received feedback from users and peers, which helped me identify areas for improvement and refine my skills. This iterative process of building, testing, and refining became a core part of my development workflow.
         </p>
+        <ImageGrid
+          images={[
+            { src: '/path/to/image5.jpg', alt: 'Description of image 5', rowStart: 1, rowEnd: 3, colStart: 1, colEnd: 2 },
+            { src: '/path/to/image6.jpg', alt: 'Description of image 6', rowStart: 1, rowEnd: 2, colStart: 2, colEnd: 3 },
+            { src: '/path/to/image7.jpg', alt: 'Description of image 7', rowStart: 2, rowEnd: 3, colStart: 2, colEnd: 3 },
+            { src: '/path/to/image8.jpg', alt: 'Description of image 8', rowStart: 1, rowEnd: 3, colStart: 3, colEnd: 4 },
+          ]}
+        />
       </div>
     ),
   },
@@ -80,8 +98,17 @@ const timelineData = [
         <p>
           Overall, my time at the tech company was a period of immense growth and learning. It solidified my passion for technology and reinforced my commitment to continuous improvement and innovation.
         </p>
+        <ImageGrid
+          images={[
+            { src: '/path/to/image9.jpg', alt: 'Description of image 9', rowStart: 1, rowEnd: 3, colStart: 1, colEnd: 2 },
+            { src: '/path/to/image10.jpg', alt: 'Description of image 10', rowStart: 1, rowEnd: 2, colStart: 2, colEnd: 3 },
+            { src: '/path/to/image11.jpg', alt: 'Description of image 11', rowStart: 2, rowEnd: 3, colStart: 2, colEnd: 3 },
+            { src: '/path/to/image12.jpg', alt: 'Description of image 12', rowStart: 1, rowEnd: 3, colStart: 3, colEnd: 4 },
+          ]}
+        />
       </div>
     ),
   },
 ];
+
 export default timelineData;
