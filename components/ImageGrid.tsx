@@ -9,11 +9,11 @@ const ImageGrid: React.FC<ImageGridProps> = ({ images }) => {
   if (images.length === 0) return null;
 
   return (
-    <div className="image-grid grid grid-cols-3 gap-4 mt-4 w-full">
+    <div className="image-grid grid grid-cols-3 gap-4 mt-4 w-full sm:w-1/2">
       {images.map((image, index) => (
         <div
           key={index}
-          className="relative w-full h-full " // Maintain aspect ratio
+          className="relative w-full h-full sm:w-1/2" // Maintain aspect ratio
           style={{
             gridRow: `${image.rowStart || 'auto'} / ${image.rowEnd || 'auto'}`,
             gridColumn: `${image.colStart || 'auto'} / ${image.colEnd || 'auto'}`,

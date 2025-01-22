@@ -13,6 +13,7 @@ export default {
         foreground: "var(--foreground)",
         bold_text: "var(--bold-text)",
       },
+      screens: { 'sm': { 'max': '640px' } },
     },
   },
   plugins: [],
