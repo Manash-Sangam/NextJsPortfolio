@@ -28,39 +28,31 @@ export default function Header() {
         <nav className={`flex-col md:flex-row md:flex ${isOpen ? 'flex opacity-100 ' : 'hidden'} md:flex`}>
           <ul className="flex flex-col md:flex-row md:gap-20 items-center ">
             <li>
-              <Link href="/" legacyBehavior>
-                <a onClick={closeMenu} className={`text-background hover:text-gray-600 font-lato ${router.pathname === '/' ? 'border-b-2 border-light-text' : ''}`}>
+              <Link href="/"  onClick={closeMenu} className={`text-background hover:text-gray-600 font-lato ${router.pathname === '/' ? 'border-b-2 border-light-text' : ''}`}>
                   Home
-                </a>
               </Link>
             </li>
             <li>
-              <Link href="/about" legacyBehavior>
-                <a onClick={closeMenu} className={`text-background hover:text-gray-600 font-lato ${router.pathname === '/about' ? 'border-b-2 border-light-text' : ''}`}>
+              <Link href="/about"  onClick={closeMenu} className={`text-background hover:text-gray-600 font-lato ${router.pathname === '/about' ? 'border-b-2 border-light-text' : ''}`}>
                   About
-                </a>
               </Link>
             </li>
             <li>
-              <Link href="/projects" legacyBehavior>
-                <a onClick={closeMenu} className={`text-background hover:text-gray-600 font-lato ${router.pathname === '/projects' ? 'border-b-2 border-light-text' : ''}`}>
+              <Link href="/projects"  onClick={closeMenu} className={`text-background hover:text-gray-600 font-lato ${router.pathname === '/projects' ? 'border-b-2 border-light-text' : ''}`}>
                   Projects
-                </a>
               </Link>
             </li>
             <li>
-              <Link href="/contact" legacyBehavior>
-                <a onClick={closeMenu} className={`text-background hover:text-gray-600 font-lato ${router.pathname === '/contact' ? 'border-b-2 border-light-text' : ''}`}>
+              <Link href="/contact"  onClick={closeMenu} className={`text-background hover:text-gray-600 font-lato ${router.pathname === '/contact' ? 'border-b-2 border-light-text' : ''}`}>
                   Contact
-                </a>
               </Link>
             </li>
             <li className="flex items-center">
-              <FaDownload className="mr-2 text-background" />
-              <Link href="#" legacyBehavior>
-                <a onClick={closeMenu} className="text-background hover:text-gray-600 font-lato">
+              <Link href="/assets/resume.pdf" target='_blank' download={"Manash_Sangam_Resume.pdf"} className="text-background hover:text-gray-600 font-lato">
+                <FaDownload className="mr-2 text-background hover:text-gray-600" />
+              </Link>
+              <Link href="/assets/resume.pdf" target='_blank'className="text-background hover:text-gray-600 font-lato">
                   Resume
-                </a>
               </Link>
             </li>
           </ul>

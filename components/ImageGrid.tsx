@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 interface ImageGridProps {
-  images: { src: string; alt: string; rowStart?: number; rowEnd?: number; colStart?: number; colEnd?: number }[];
+  images: { src: string; alt: string; rowStart?: number; rowEnd?: number; colStart?: number; colEnd?: number ,fillType?: string}[];
 }
 
 const ImageGrid: React.FC<ImageGridProps> = ({ images }) => {
@@ -23,7 +23,7 @@ const ImageGrid: React.FC<ImageGridProps> = ({ images }) => {
             src={image.src}
             alt={image.alt}
             layout="fill"
-            objectFit="cover"
+            objectFit={image.fillType || 'contain'}
             className="absolute inset-0 w-full h-full"
           />
         </div>

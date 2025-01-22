@@ -13,7 +13,7 @@ const Skill: React.FC<SkillProps> = ({ title, technologies }) => {
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
         {technologies.map((tech, index) => (
           <div key={index} className="flex flex-col items-center">
-            <Image src={tech.imageUrl} alt={tech.name} width={64} height={64} className="rounded-lg" />
+            <Image src={tech.imageUrl} alt={tech.name} width={64} height={64} className="rounded-lg skill-image" />
             <span className="mt-2 text-sm">{tech.name}</span>
           </div>
         ))}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Head from 'next/head';
 import DockItems from '../components/DockItems'; // Import the DockItems component
 
 export default function Contact() {
@@ -37,6 +38,22 @@ export default function Contact() {
 
   return (
     <div className="contact-container mx-auto">
+      <Head>
+        <title>Contact - My Portfolio</title>
+        <meta name="description" content="Get in touch with me through the contact form on this page." />
+        <meta name="keywords" content="contact, portfolio, web developer, software engineer" />
+        <meta name="author" content="Manash Sangam" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Manash Sangam - Contact" />
+        <meta property="og:description" content="Get in touch with me through the contact form on this page." />
+        <meta property="og:image" content="/assets/resumeimagecropped.jpeg" />
+        <meta property="og:url" content="https://manash-sangam.com.np" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Manash Sangam - Contact" />
+        <meta name="twitter:description" content="Get in touch with me through the contact form on this page." />
+        <meta name="twitter:image" content="/assets/resumeimagecropped.jpeg" />
+      </Head>
       <div className="email-container p-8 bg-bold-text text-light-text rounded-3xl shadow-md">
         <h1 className="text-4xl font-bold mb-4 text-background">Contact Me</h1>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">

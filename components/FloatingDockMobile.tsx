@@ -1,7 +1,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
-import { FaShareAlt, FaGlobe } from "react-icons/fa";
+import { FaGlobe } from "react-icons/fa";
+import React from 'react';
 
 const FloatingDockMobile = ({
   items,
