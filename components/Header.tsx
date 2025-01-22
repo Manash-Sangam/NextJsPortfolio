@@ -48,10 +48,10 @@ export default function Header() {
               </Link>
             </li>
             <li className="flex items-center">
-              <Link href="/assets/resume.pdf" target='_blank' download={"Manash_Sangam_Resume.pdf"} className="text-background hover:text-gray-600 font-lato">
+              <Link href="/assets/Resume.pdf" target='_blank' download={"Manash_Sangam_Resume.pdf"} className="text-background hover:text-gray-600 font-lato">
                 <FaDownload className="mr-2 text-background hover:text-gray-600" />
               </Link>
-              <Link href="/assets/resume.pdf" target='_blank'className="text-background hover:text-gray-600 font-lato">
+              <Link href="/assets/Resume.pdf" target='_blank'className="text-background hover:text-gray-600 font-lato">
                   Resume
               </Link>
             </li>
