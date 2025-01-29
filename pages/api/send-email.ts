@@ -17,7 +17,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       from: email,
       to: "manashsangam04@gmail.com",
       subject: `Contact form submission from ${name}`,
-      text: message,
+      text: `${message}\n\nFrom: ${name}\nEmail: ${email}`,
     };
 
     try {
