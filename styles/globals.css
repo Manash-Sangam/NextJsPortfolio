@@ -38,7 +38,6 @@ body {
 .home-container {
   background-color: var(--background);
   min-height: calc(100vh - 10vh);
-  padding: 2rem 5rem 0 5rem; /* Add padding to the sides and top */
 }
 
 .project-container {
@@ -48,7 +47,8 @@ body {
 
 .typerwriter-container {
   background-color: var(--background);
-  padding: 2rem 20rem 2rem 20rem; /* Add padding to the sides and top */
+  width:80%;
+  padding:1rem;
 }
 
 .about-container {
@@ -121,8 +121,7 @@ nav a {
 }
 
 .typewriter {
-  max-width: 95%;
-  height: 30vh; /* Reduced height */
+  height: 40vh; /* Reduced height */
   line-height: 1.4;
   font-family: 'Space Mono', monospace; /* Use Space Mono font */
   font-size: calc(1.5rem + 1.5vw); /* Reduced font size */
